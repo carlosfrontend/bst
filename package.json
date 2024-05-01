@@ -1,0 +1,29 @@
+{
+  "name": "bst",
+  "version": "1.0.0",
+  "description": "This project creates a balanced search binary tree with Javascript",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx nodemon ./src/index.js",
+    "test": "standard && node ./src/index.js",
+    "fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosfrontend/bst.git"
+  },
+  "keywords": [
+    "BST"
+  ],
+  "author": "carlosfrontend",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosfrontend/bst/issues"
+  },
+  "homepage": "https://github.com/carlosfrontend/bst#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "standard": "*"
+  }
+}
