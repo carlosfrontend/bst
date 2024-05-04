@@ -2,7 +2,7 @@ const mergeSort = (arr) => {
   if (arr.length <= 1) {
     return arr
   }
-  const middle = parseInt(arr.length / 2, 10)
+  const middle = Math.floor(arr.length / 2)
   let left = arr.slice(0, middle)
   let right = arr.slice(middle, arr.length)
 
