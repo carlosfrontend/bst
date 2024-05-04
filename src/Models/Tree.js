@@ -27,6 +27,41 @@ class Tree {
 
     return insertRec(this.root, value)
   }
+
+  delete (value) {
+    const deleteRec = (root, value) => {
+      if (root === null || value === undefined) {
+        return root
+      }
+
+      if (value < root.data) {
+        root.left = deleteRec(root.left, value)
+      } else if (value > root.data) {
+        root.right = deleteRec(root.right, value)
+      } else {
+        if (root.left === null) {
+          return root.right
+        } else if (root.right === null) {
+          return root.left
+        }
+        const findMin = (root) => {
+          let minValue = root.data
+          while (root.left !== null) {
+            minValue = root.left.data
+            root = root.left
+          }
+          return minValue
+        }
+
+        root.data = findMin(root.right)
+        root.right = deleteRec(root.right, root.data)
+      }
+
+      return root
+    }
+
+    return deleteRec(this.root, value)
+  }
 }
 
 export default Tree
