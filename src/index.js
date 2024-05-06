@@ -11,10 +11,15 @@ const bst = new Tree(arr)
 bst.insert(22)
 
 // DELETE
+
 bst.delete(3)
 bst.delete(6345)
 bst.delete(5)
 bst.delete(4)
+
+// FIND VALUE
+
+bst.findValue()
 
 // PRINT THE TREE
 

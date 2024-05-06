@@ -62,6 +62,33 @@ class Tree {
 
     return deleteRec(this.root, value)
   }
+
+  findValue (value) {
+    const findValueRec = (root, value) => {
+      let current = root
+
+      while (current) {
+        if (value === undefined) {
+          console.log('Write a value please!')
+          return
+        } else if (current.data > value) {
+          current = current.left
+        } else if (current.data < value) {
+          current = current.right
+        } else {
+          console.log('Found!')
+          console.log(current)
+          return current
+        }
+      }
+
+      if (!current) {
+        console.log('Not found!')
+      }
+    }
+
+    return findValueRec(this.root, value)
+  }
 }
 
 export default Tree
