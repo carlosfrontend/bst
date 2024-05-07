@@ -22,10 +22,15 @@ bst.delete(4)
 console.log('\n ######### FIND VALUE #########\n')
 console.log(bst.findValue(67))
 
-// LEVEL ORDER
+// LEVEL ORDER IRERATIVE
 
 console.log('\n ######### LEVEL ORDER ITERATIVE #########\n')
-console.log(bst.levelOrder(bst.Tree))
+console.log(bst.levelOrderIterative(bst.Tree))
+
+// LEVEL ORDER RECURSIVE
+
+console.log('\n ######### LEVEL ORDER RECURSIVE #########\n')
+
 
 // PRINT THE TREE
 

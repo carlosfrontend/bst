@@ -104,7 +104,7 @@ class Tree {
     return arr
   }
 
-  levelOrder (callback = this.enqueu) {
+  levelOrderIterative (callback = this.enqueu) {
     return callback(this.root)
   }
 }
