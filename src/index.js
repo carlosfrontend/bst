@@ -19,7 +19,7 @@ bst.delete(4)
 
 // FIND VALUE
 
-bst.findValue()
+console.log(bst.findValue(67))
 
 // PRINT THE TREE
 

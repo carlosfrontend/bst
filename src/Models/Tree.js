@@ -69,21 +69,19 @@ class Tree {
 
       while (current) {
         if (value === undefined) {
-          console.log('Write a value please!')
-          return
+          return 'Write a value please!'
         } else if (current.data > value) {
           current = current.left
         } else if (current.data < value) {
           current = current.right
         } else {
           console.log('Found!')
-          console.log(current)
           return current
         }
       }
 
       if (!current) {
-        console.log('Not found!')
+        return `The value ${value} not was found in the tree!`;
       }
     }
 
