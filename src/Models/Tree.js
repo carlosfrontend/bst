@@ -81,11 +81,31 @@ class Tree {
       }
 
       if (!current) {
-        return `The value ${value} not was found in the tree!`;
+        return `The value ${value} not was found in the tree!`
       }
     }
 
     return findValueRec(this.root, value)
+  }
+
+  enqueu (current) {
+    const QUEU = []
+    const arr = []
+    if (current === null) return
+    QUEU.push(current)
+
+    while (QUEU.length) {
+      current = QUEU.shift()
+      QUEU.unshift()
+      arr.push(current.data)
+      if (current.left) QUEU.push(current.left)
+      if (current.right) QUEU.push(current.right)
+    }
+    return arr
+  }
+
+  levelOrder (callback = this.enqueu) {
+    return callback(this.root)
   }
 }
 

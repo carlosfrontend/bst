@@ -19,7 +19,13 @@ bst.delete(4)
 
 // FIND VALUE
 
+console.log('\n ######### FIND VALUE #########\n')
 console.log(bst.findValue(67))
+
+// LEVEL ORDER
+
+console.log('\n ######### LEVEL ORDER ITERATIVE #########\n')
+console.log(bst.levelOrder(bst.Tree))
 
 // PRINT THE TREE
 
