@@ -234,6 +234,12 @@ class Tree {
     }
     return true
   }
+
+  rebalance () {
+    if (!this.root) return
+    const arr = this.inOrder(this.root)
+    this.root = buildTree(arr, 0, arr.length - 1)
+  }
 }
 
 export default Tree

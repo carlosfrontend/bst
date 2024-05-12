@@ -84,7 +84,15 @@ prettyPrint(bst.root)
 
 bst.delete(22)
 bst.delete(600)
+bst.insert(50)
+bst.insert(90)
+bst.insert(95)
+bst.insert(200)
 
 console.log('\n ######### IS BALANCED ? #########\n')
 console.log(bst.isBalanced(bst.root))
+prettyPrint(bst.root)
+
+console.log('\n ######### REBALANCE!! #########\n')
+bst.rebalance(bst.root)
 prettyPrint(bst.root)
