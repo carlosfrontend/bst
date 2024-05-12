@@ -63,3 +63,7 @@ prettyPrint(bst.root)
 console.log('\n ######### HEIGHT OF NODE #########\n')
 console.log(bst.height(bst.root))
 prettyPrint(bst.root)
+
+console.log('\n ######### DEPTH OF NODE #########\n')
+console.log(bst.depth(bst.root))
+prettyPrint(bst.root)

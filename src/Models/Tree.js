@@ -198,6 +198,21 @@ class Tree {
 
     return 1 + Math.max(leftHeight, rightHeight)
   }
+
+  depth (node) {
+    const findDepth = (current, target, currentDepth) => {
+      if (!current) return -1
+      if (current === target) return currentDepth
+
+      const leftDepth = findDepth(current.left, target, currentDepth + 1)
+      const rightDepth = findDepth(current.right, target, currentDepth + 1)
+
+      if (leftDepth === -1 && rightDepth === -1) return -1
+      return Math.max(leftDepth, rightDepth)
+    }
+
+    return findDepth(this.root, node, 0)
+  }
 }
 
 export default Tree
