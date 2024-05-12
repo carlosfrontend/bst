@@ -9,7 +9,6 @@ class Tree {
 
   // METHODS
   insert (value) {
-    // Inserts a new node into the tree
     const insertRec = (root, value) => {
       if (root === null) {
         root = new Node(value)
