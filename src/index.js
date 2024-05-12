@@ -9,6 +9,7 @@ const bst = new Tree(arr)
 // INSERT
 
 bst.insert(22)
+bst.insert(44)
 
 // DELETE
 
@@ -21,17 +22,42 @@ bst.delete(4)
 
 console.log('\n ######### FIND VALUE #########\n')
 console.log(bst.findValue(67))
+prettyPrint(bst.root)
 
 // LEVEL ORDER IRERATIVE
 
 console.log('\n ######### LEVEL ORDER ITERATIVE #########\n')
-console.log(bst.levelOrderIterative(bst.Tree))
+console.log(bst.levelOrderIterative())
+prettyPrint(bst.root)
 
 // LEVEL ORDER RECURSIVE
 
 console.log('\n ######### LEVEL ORDER RECURSIVE #########\n')
+console.log(bst.levelOrderRecursive())
+prettyPrint(bst.root)
 
 
-// PRINT THE TREE
+console.log('\n ######### IN ORDER WITH CALLBACK AS PARAMETER #########\n')
+console.log(bst.inOrder(bst.root, bst.orderCallback))
+prettyPrint(bst.root)
 
+console.log('\n ######### IN ORDER WITHOUT CALLBACK AS PARAMETER #########\n')
+console.log(bst.inOrder(bst.root))
+prettyPrint(bst.root)
+
+console.log('\n ######### PRE ORDER WITH CALLBACK AS PARAMETER #########\n')
+console.log(bst.preOrder(bst.root, bst.orderCallback))
+prettyPrint(bst.root)
+
+console.log('\n ######### PRE ORDER WITHOUT CALLBACK AS PARAMETER #########\n')
+console.log(bst.preOrder(bst.root))
+prettyPrint(bst.root)
+
+
+console.log('\n ######### POST ORDER WITH CALLBACK AS PARAMETER #########\n')
+console.log(bst.postOrder(bst.root, bst.orderCallback))
+prettyPrint(bst.root)
+
+console.log('\n ######### POST ORDER WITHOUT CALLBACK AS PARAMETER #########\n')
+console.log(bst.postOrder(bst.root))
 prettyPrint(bst.root)
