@@ -67,3 +67,24 @@ prettyPrint(bst.root)
 console.log('\n ######### DEPTH OF NODE #########\n')
 console.log(bst.depth(bst.root))
 prettyPrint(bst.root)
+
+bst.delete(23)
+bst.delete()
+
+console.log('\n ######### IS BALANCED ? #########\n')
+console.log(bst.isBalanced(bst.root))
+prettyPrint(bst.root)
+
+bst.insert(600)
+bst.insert(6)
+
+console.log('\n ######### IS BALANCED ? #########\n')
+console.log(bst.isBalanced(bst.root))
+prettyPrint(bst.root)
+
+bst.delete(22)
+bst.delete(600)
+
+console.log('\n ######### IS BALANCED ? #########\n')
+console.log(bst.isBalanced(bst.root))
+prettyPrint(bst.root)

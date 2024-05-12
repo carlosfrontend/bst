@@ -213,6 +213,27 @@ class Tree {
 
     return findDepth(this.root, node, 0)
   }
+
+  isBalanced (root) {
+    if (!root) return true
+    const leftHeight = this.height(root.left)
+    const rightHeight = this.height(root.right)
+
+    if (leftHeight > rightHeight) {
+      if ((leftHeight - rightHeight) > 1) {
+        return false
+      } else {
+        return true
+      }
+    } else if (rightHeight > leftHeight) {
+      if ((rightHeight - leftHeight) > 1) {
+        return false
+      } else {
+        return true
+      }
+    }
+    return true
+  }
 }
 
 export default Tree
