@@ -59,3 +59,7 @@ prettyPrint(bst.root)
 console.log('\n ######### POST ORDER WITHOUT CALLBACK AS PARAMETER #########\n')
 console.log(bst.postOrder(bst.root))
 prettyPrint(bst.root)
+
+console.log('\n ######### HEIGHT OF NODE #########\n')
+console.log(bst.height(bst.root))
+prettyPrint(bst.root)
